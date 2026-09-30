@@ -1,62 +1,56 @@
-# Spatial Analysis Project
+# Spatial Analysis Project (R Version)
 
-This repository contains a simple Python project for spatial analysis using GeoPandas and Shapely. It demonstrates a few core spatial operations:
+This project is implemented in R using the `sf` and `ggplot2` packages for vector spatial analysis and visualization.
 
-- creating sample point data
-- creating a study area polygon
-- calculating buffer zones around points
-- checking which points fall within a boundary
-- exporting outputs to GeoJSON
-- plotting the result
+## What this script does
 
-## Features
-
-- Point and polygon analysis
-- Buffer generation
-- Spatial summary statistics
-- GeoJSON export
-- Visualization with Matplotlib
+- creates a study area polygon
+- creates sample point features
+- checks which points fall inside the polygon
+- creates a 1.5-unit buffer around each point
+- saves the outputs as GeoJSON files
+- produces a map visualization
 
 ## Requirements
 
-Python 3.10+
+Install R (version 4.0 or newer) and then run:
 
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
+```r
+install.packages(c("sf", "ggplot2", "dplyr"), repos = "https://cloud.r-project.org")
 ```
 
-## Run the analysis
+## Run the project
 
 ```bash
-python spatial_analysis.py
+Rscript spatial_analysis.R
 ```
 
-This will create the following outputs in the `outputs/` directory:
+This will create the following files in the `outputs/` folder:
 
 - `study_area.geojson`
 - `sample_points.geojson`
 - `buffers.geojson`
 - `spatial_analysis_map.png`
 
-## Project structure
+## File structure
 
 ```text
 .
 ├── README.md
-├── requirements.txt
-├── spatial_analysis.py
+├── spatial_analysis.R
+├── install_packages.R
 ├── outputs/
-└── .gitignore
+├── .gitignore
+└── requirements.txt
 ```
 
 ## Example use cases
 
-This starter project can be extended for:
+This starter project can be adapted for:
 
-- land-use mapping
-- wildlife movement analysis
-- urban planning and service coverage
+- land cover analysis
+- flood risk mapping
+- urban planning
 - environmental monitoring
-- facility accessibility studies
+- location intelligence
+- service coverage analysis
